@@ -8,6 +8,8 @@ all:main.o led.o stm32_startup.o syscalls.o final.elf
 
 semi:main.o led.o stm32_startup.o syscalls.o final_sh.elf 
 
+gitall:git add status push
+
 main.o:main.c
 	$(CC) $(CFLAGS) $^ -o $@
 
