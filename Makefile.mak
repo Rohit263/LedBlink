@@ -33,4 +33,20 @@ load:
 	openocd -f board/stm32f4discovery.cfg
 
 git:
+	git init
+
+add:
+	git add .
+	git commit -m="$m"
+	
+status:
+	git status
+	
+clone:
 	git clone "$c"
+	
+push:
+	git push
+
+pull:
+	git pull
