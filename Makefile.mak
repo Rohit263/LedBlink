@@ -33,8 +33,4 @@ load:
 	openocd -f board/stm32f4discovery.cfg
 
 git:
-	git add .
-	
-	git commit -m "$m"
-	
-	git push -u origin main
+	git clone "$c"
