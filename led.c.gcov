@@ -1,0 +1,61 @@
+        -:    0:Source:led.c
+        -:    0:Graph:led.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    1:
+        -:    2:#include<stdint.h>
+        -:    3:#include "led.h"
+        -:    4:
+        -:    5:
+        -:    6:
+    #####:    7:void delay(uint32_t count)
+        -:    8:{
+    #####:    9:  for(uint32_t i = 0 ; i < count ; i++);
+    #####:   10:}
+        -:   11:
+    #####:   12:void led_init_all(void)
+        -:   13:{
+        -:   14:
+    #####:   15:	uint32_t *pRccAhb1enr = (uint32_t*)0x40023830;
+    #####:   16:	uint32_t *pGpiodModeReg = (uint32_t*)0x40020C00;
+        -:   17:
+        -:   18:
+    #####:   19:	*pRccAhb1enr |= ( 1 << 3);
+        -:   20:	//configure LED_GREEN
+    #####:   21:	*pGpiodModeReg |= ( 1 << (2 * LED_GREEN));
+    #####:   22:	*pGpiodModeReg |= ( 1 << (2 * LED_ORANGE));
+    #####:   23:	*pGpiodModeReg |= ( 1 << (2 * LED_RED));
+    #####:   24:	*pGpiodModeReg |= ( 1 << (2 * LED_BLUE));
+        -:   25:
+        -:   26:#if 0
+        -:   27:	//configure the outputtype
+        -:   28:	*pGpioOpTypeReg |= ( 1 << (2 * LED_GREEN));
+        -:   29:	*pGpioOpTypeReg |= ( 1 << (2 * LED_ORANGE));
+        -:   30:	*pGpioOpTypeReg |= ( 1 << (2 * LED_RED));
+        -:   31:	*pGpioOpTypeReg |= ( 1 << (2 * LED_BLUE));
+        -:   32:#endif
+        -:   33:
+    #####:   34:    led_off(LED_GREEN);
+    #####:   35:    led_off(LED_ORANGE);
+    #####:   36:    led_off(LED_RED);
+    #####:   37:    led_off(LED_BLUE);
+        -:   38:
+        -:   39:
+        -:   40:
+    #####:   41:}
+        -:   42:
+    #####:   43:void led_on(uint8_t led_no)
+        -:   44:{
+    #####:   45:  uint32_t *pGpiodDataReg = (uint32_t*)0x40020C14;
+    #####:   46:  *pGpiodDataReg |= ( 1 << led_no);
+        -:   47:
+    #####:   48:}
+        -:   49:
+    #####:   50:void led_off(uint8_t led_no)
+        -:   51:{
+    #####:   52:	  uint32_t *pGpiodDataReg = (uint32_t*)0x40020C14;
+    #####:   53:	  *pGpiodDataReg &= ~( 1 << led_no);
+        -:   54:
+    #####:   55:}
+        -:   56:
+        -:   57:
