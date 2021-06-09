@@ -51,10 +51,9 @@ TCB_t user_tasks[MAX_TASKS];
 
 //semihosting init function 
 extern void initialise_monitor_handles(void);
-
+//Comment by Rohit
 int main(void)
 {
-
 	enable_processor_faults();
 	
 	initialise_monitor_handles();
@@ -72,9 +71,12 @@ int main(void)
 	switch_sp_to_psp();
 
 	task1_handler();
-
+	
+	
+	
 	for(;;);
 }
+
 
 void initialise_monitor_handles(void)
 {
@@ -198,33 +200,33 @@ void init_tasks_stack(void)
 	user_tasks[4].task_handler = task4_handler;
 
 
-	uint32_t *pPSP;
+	// uint32_t *pPSP;
 
-	for(int i = 0 ; i < MAX_TASKS ;i++)
-	{
-		pPSP = (uint32_t*) user_tasks[i].psp_value;
+	// for(int i = 0 ; i < MAX_TASKS ;i++)
+	// {
+		// *pPSP = (uint32_t*) user_tasks[i].psp_value;
 
-		pPSP--;
-		*pPSP = DUMMY_XPSR;//0x00100000
+		// pPSP--;
+		// *pPSP = DUMMY_XPSR;//0x00100000
 
-		pPSP--; //PC
-		*pPSP = (uint32_t) user_tasks[i].task_handler;
-
-
-		pPSP--; //LR
-		*pPSP = 0xFFFFFFFD;
-
-		for(int j = 0 ; j < 13 ; j++)
-		{
-			pPSP--;
-		    *pPSP = 0;
-
-		}
-
-		user_tasks[i].psp_value = (uint32_t)pPSP;
+		// pPSP--; //PC
+		// *pPSP = (uint32_t) user_tasks[i].task_handler;
 
 
-	}
+		// pPSP--; //LR
+		// *pPSP = 0xFFFFFFFD;
+
+		// for(int j = 0 ; j < 13 ; j++)
+		// {
+			// pPSP--;
+		    // *pPSP = 0;
+
+		// }
+
+		// user_tasks[i].psp_value = (uint32_t)pPSP;
+
+
+	//}
 
 }
 

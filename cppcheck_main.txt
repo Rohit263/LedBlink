@@ -1,0 +1,74 @@
+stm32_startup.c:208:0: style: The function 'Default_Handler' is never used. [unusedFunction]
+
+^
+main.c:472:0: style: The function 'FLASH_Handler' is never used. [unusedFunction]
+
+^
+main.c:404:0: style: The function 'MemManage_Handler' is never used. [unusedFunction]
+
+^
+syscalls.c:116:0: style: The function '_close' is never used. [unusedFunction]
+
+^
+syscalls.c:179:0: style: The function '_execve' is never used. [unusedFunction]
+
+^
+syscalls.c:86:0: style: The function '_exit' is never used. [unusedFunction]
+
+^
+syscalls.c:173:0: style: The function '_fork' is never used. [unusedFunction]
+
+^
+syscalls.c:122:0: style: The function '_fstat' is never used. [unusedFunction]
+
+^
+syscalls.c:75:0: style: The function '_getpid' is never used. [unusedFunction]
+
+^
+syscalls.c:128:0: style: The function '_isatty' is never used. [unusedFunction]
+
+^
+syscalls.c:167:0: style: The function '_link' is never used. [unusedFunction]
+
+^
+syscalls.c:133:0: style: The function '_lseek' is never used. [unusedFunction]
+
+^
+syscalls.c:138:0: style: The function '_open' is never used. [unusedFunction]
+
+^
+syscalls.c:92:0: style: The function '_read' is never used. [unusedFunction]
+
+^
+syscalls.c:191:0: style: The function '_sbrk' is never used. [unusedFunction]
+
+^
+syscalls.c:161:0: style: The function '_stat' is never used. [unusedFunction]
+
+^
+syscalls.c:156:0: style: The function '_times' is never used. [unusedFunction]
+
+^
+syscalls.c:150:0: style: The function '_unlink' is never used. [unusedFunction]
+
+^
+syscalls.c:144:0: style: The function '_wait' is never used. [unusedFunction]
+
+^
+syscalls.c:104:0: style: The function '_write' is never used. [unusedFunction]
+
+^
+led.c:7:0: style: The function 'delay' is never used. [unusedFunction]
+
+^
+main.c:243:0: style: The function 'get_psp_value' is never used. [unusedFunction]
+
+^
+main.c:250:0: style: The function 'save_psp_value' is never used. [unusedFunction]
+
+^
+main.c:256:0: style: The function 'update_next_task' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+

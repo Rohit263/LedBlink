@@ -1,0 +1,1 @@
+log.txt -fprofile-arcs -ftest-coverage main.c

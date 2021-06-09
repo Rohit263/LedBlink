@@ -11,6 +11,9 @@
     #####:    7:void delay(uint32_t count)
         -:    8:{
     #####:    9:  for(uint32_t i = 0 ; i < count ; i++);
+    %%%%%:    9-block  0
+    %%%%%:    9-block  1
+    %%%%%:    9-block  2
     #####:   10:}
         -:   11:
     #####:   12:void led_init_all(void)
@@ -36,6 +39,7 @@
         -:   32:#endif
         -:   33:
     #####:   34:    led_off(LED_GREEN);
+    %%%%%:   34-block  0
     #####:   35:    led_off(LED_ORANGE);
     #####:   36:    led_off(LED_RED);
     #####:   37:    led_off(LED_BLUE);

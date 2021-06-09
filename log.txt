@@ -1,0 +1,24 @@
+/tmp/cc4392a1.s: Assembler messages:
+/tmp/cc4392a1.s:377: Error: no such instruction: `msr MSP,%eax'
+/tmp/cc4392a1.s:385: Error: no such instruction: `bx LR'
+/tmp/cc4392a1.s:615: Error: invalid char '{' beginning operand 1 `{LR}'
+/tmp/cc4392a1.s:623: Error: no such instruction: `bl get_psp_value'
+/tmp/cc4392a1.s:631: Error: no such instruction: `msr PSP,R0'
+/tmp/cc4392a1.s:639: Error: invalid char '{' beginning operand 1 `{LR}'
+/tmp/cc4392a1.s:647: Error: expecting operand after ','; got nothing
+/tmp/cc4392a1.s:655: Error: no such instruction: `msr CONTROL,R0'
+/tmp/cc4392a1.s:663: Error: no such instruction: `bx LR'
+/tmp/cc4392a1.s:716: Error: expecting operand after ','; got nothing
+/tmp/cc4392a1.s:724: Error: no such instruction: `msr PRIMASK,R0'
+/tmp/cc4392a1.s:766: Error: expecting operand after ','; got nothing
+/tmp/cc4392a1.s:774: Error: no such instruction: `msr PRIMASK,R0'
+/tmp/cc4392a1.s:795: Error: no such instruction: `mrs R0,PSP'
+/tmp/cc4392a1.s:803: Error: no such instruction: `stmdb R0!,{R4-R11}'
+/tmp/cc4392a1.s:811: Error: invalid char '{' beginning operand 1 `{LR}'
+/tmp/cc4392a1.s:819: Error: no such instruction: `bl save_psp_value'
+/tmp/cc4392a1.s:827: Error: no such instruction: `bl update_next_task'
+/tmp/cc4392a1.s:835: Error: no such instruction: `bl get_psp_value'
+/tmp/cc4392a1.s:843: Error: no such instruction: `ldmia R0!,{R4-R11}'
+/tmp/cc4392a1.s:851: Error: no such instruction: `msr PSP,R0'
+/tmp/cc4392a1.s:859: Error: invalid char '{' beginning operand 1 `{LR}'
+/tmp/cc4392a1.s:867: Error: no such instruction: `bx LR'
